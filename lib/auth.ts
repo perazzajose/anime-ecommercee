@@ -1,8 +1,8 @@
-import { createServerSupabaseClient } from "@/lib/supabase"
+import { createClient } from "@/lib/supabase/server"
 import { redirect } from "next/navigation"
 
 export async function requireAuth() {
-  const supabase = await createServerSupabaseClient()
+  const supabase = await createClient()
 
   const {
     data: { user },
@@ -18,7 +18,7 @@ export async function requireAuth() {
 
 export async function requireAdminAuth() {
   const user = await requireAuth()
-  const supabase = await createServerSupabaseClient()
+  const supabase = await createClient()
 
   const { data: adminUser, error } = await supabase
     .from("admin_users")

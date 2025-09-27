@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { createClient } from "@/lib/supabase"
+import { createClient } from "@/lib/supabase/client"
 import type { Product } from "@/lib/supabase"
 import { ProductCard } from "@/components/store/product-card"
 
