@@ -4,77 +4,79 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  /* Updated primary color to anime-inspired purple */
-  --primary: oklch(0.55 0.2 280);
-  --primary-foreground: oklch(0.985 0 0);
-  /* Added anime-themed accent colors */
-  --secondary: oklch(0.95 0.05 320);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.92 0.08 300);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  /* Updated to warm oak wood color palette */
+  --background: oklch(0.97 0.02 45); /* Warm cream background */
+  --foreground: oklch(0.25 0.05 35); /* Dark walnut text */
+  --card: oklch(0.95 0.03 40); /* Light oak card background */
+  --card-foreground: oklch(0.25 0.05 35);
+  --popover: oklch(0.95 0.03 40);
+  --popover-foreground: oklch(0.25 0.05 35);
+  /* Rich oak brown as primary */
+  --primary: oklch(0.45 0.08 45); /* Rich oak brown */
+  --primary-foreground: oklch(0.97 0.02 45);
+  /* Warm secondary tones */
+  --secondary: oklch(0.85 0.04 50); /* Light honey oak */
+  --secondary-foreground: oklch(0.25 0.05 35);
+  --muted: oklch(0.92 0.03 45); /* Soft oak muted */
+  --muted-foreground: oklch(0.55 0.04 40);
+  --accent: oklch(0.75 0.06 35); /* Medium oak accent */
+  --accent-foreground: oklch(0.25 0.05 35);
+  --destructive: oklch(0.55 0.15 25); /* Warm red-brown */
+  --destructive-foreground: oklch(0.97 0.02 45);
+  --border: oklch(0.88 0.03 45); /* Subtle oak border */
+  --input: oklch(0.95 0.03 40);
+  --ring: oklch(0.45 0.08 45);
+  /* Wood-inspired chart colors */
+  --chart-1: oklch(0.65 0.12 45); /* Golden oak */
+  --chart-2: oklch(0.55 0.08 35); /* Dark oak */
+  --chart-3: oklch(0.75 0.06 55); /* Light maple */
+  --chart-4: oklch(0.45 0.1 25); /* Walnut */
+  --chart-5: oklch(0.85 0.04 50); /* Birch */
+  --radius: 0.75rem; /* Slightly more rounded for organic feel */
+  --sidebar: oklch(0.95 0.03 40);
+  --sidebar-foreground: oklch(0.25 0.05 35);
+  --sidebar-primary: oklch(0.45 0.08 45);
+  --sidebar-primary-foreground: oklch(0.97 0.02 45);
+  --sidebar-accent: oklch(0.92 0.03 45);
+  --sidebar-accent-foreground: oklch(0.25 0.05 35);
+  --sidebar-border: oklch(0.88 0.03 45);
+  --sidebar-ring: oklch(0.45 0.08 45);
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.145 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.145 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  /* Dark mode anime colors */
-  --primary: oklch(0.65 0.25 280);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.35 0.15 300);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.396 0.141 25.723);
-  --destructive-foreground: oklch(0.637 0.237 25.331);
-  --border: oklch(0.269 0 0);
-  --input: oklch(0.269 0 0);
-  --ring: oklch(0.439 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(0.269 0 0);
-  --sidebar-ring: oklch(0.439 0 0);
+  /* Dark mode with rich wood tones */
+  --background: oklch(0.15 0.02 35); /* Dark walnut background */
+  --foreground: oklch(0.92 0.03 45); /* Light oak text */
+  --card: oklch(0.18 0.03 35);
+  --card-foreground: oklch(0.92 0.03 45);
+  --popover: oklch(0.18 0.03 35);
+  --popover-foreground: oklch(0.92 0.03 45);
+  --primary: oklch(0.65 0.08 45); /* Lighter oak for dark mode */
+  --primary-foreground: oklch(0.15 0.02 35);
+  --secondary: oklch(0.25 0.04 40);
+  --secondary-foreground: oklch(0.92 0.03 45);
+  --muted: oklch(0.22 0.03 35);
+  --muted-foreground: oklch(0.65 0.04 40);
+  --accent: oklch(0.35 0.06 35);
+  --accent-foreground: oklch(0.92 0.03 45);
+  --destructive: oklch(0.45 0.12 25);
+  --destructive-foreground: oklch(0.92 0.03 45);
+  --border: oklch(0.25 0.03 35);
+  --input: oklch(0.22 0.03 35);
+  --ring: oklch(0.65 0.08 45);
+  --chart-1: oklch(0.55 0.1 45);
+  --chart-2: oklch(0.45 0.08 35);
+  --chart-3: oklch(0.65 0.06 55);
+  --chart-4: oklch(0.35 0.08 25);
+  --chart-5: oklch(0.75 0.04 50);
+  --sidebar: oklch(0.18 0.03 35);
+  --sidebar-foreground: oklch(0.92 0.03 45);
+  --sidebar-primary: oklch(0.65 0.08 45);
+  --sidebar-primary-foreground: oklch(0.15 0.02 35);
+  --sidebar-accent: oklch(0.22 0.03 35);
+  --sidebar-accent-foreground: oklch(0.92 0.03 45);
+  --sidebar-border: oklch(0.25 0.03 35);
+  --sidebar-ring: oklch(0.65 0.08 45);
 }
 
 @theme inline {
@@ -124,5 +126,31 @@
   }
   body {
     @apply bg-background text-foreground;
+    /* Added subtle wood grain texture */
+    background-image: radial-gradient(circle at 25% 25%, oklch(0.98 0.01 45) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, oklch(0.96 0.02 40) 0%, transparent 50%);
+  }
+
+  /* Added wood-inspired utility classes */
+  .wood-grain {
+    background-image: linear-gradient(
+        90deg,
+        transparent 79%,
+        oklch(0.94 0.03 45) 79%,
+        oklch(0.94 0.03 45) 81%,
+        transparent 81%
+      ), linear-gradient(90deg, transparent 24%, oklch(0.96 0.02 40) 25%, oklch(0.96 0.02 40) 26%, transparent 27%),
+      linear-gradient(90deg, transparent 49%, oklch(0.95 0.025 42) 50%, oklch(0.95 0.025 42) 52%, transparent 53%);
+  }
+
+  .wood-texture {
+    background-image: repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      oklch(0.94 0.03 45) 2px,
+      oklch(0.94 0.03 45) 4px
+    );
+    opacity: 0.1;
   }
 }
