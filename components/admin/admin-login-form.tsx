@@ -29,6 +29,8 @@ export function AdminLoginForm() {
     try {
       const supabase = createClient()
 
+      console.log("[v0] Attempting login with:", formData.email)
+
       const { data, error } = await supabase.auth.signInWithPassword({
         email: formData.email,
         password: formData.password,
@@ -37,10 +39,14 @@ export function AdminLoginForm() {
         },
       })
 
+      console.log("[v0] Auth response:", { data, error })
+
       if (error) throw error
 
       // Verificar si el usuario es admin
       if (data.user) {
+        console.log("[v0] User authenticated, checking admin status...")
+
         const { data: adminUser, error: adminError } = await supabase
           .from("admin_users")
           .select("*")
@@ -48,14 +54,18 @@ export function AdminLoginForm() {
           .eq("is_active", true)
           .single()
 
+        console.log("[v0] Admin check result:", { adminUser, adminError })
+
         if (adminError || !adminUser) {
           await supabase.auth.signOut()
           throw new Error("No tienes permisos de administrador")
         }
 
+        console.log("[v0] Admin verified, redirecting...")
         router.push("/admin")
       }
     } catch (error: any) {
+      console.log("[v0] Login error:", error)
       setError(error.message || "Error al iniciar sesión")
     } finally {
       setLoading(false)
